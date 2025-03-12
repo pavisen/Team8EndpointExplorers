@@ -1,0 +1,1778 @@
+[
+    {
+      "requests": [
+        {
+            "name": "Login",
+            "data": [
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "loginsss",
+                  "authType": "No Auth",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/xml",                  
+                    "user_password": "March@2025",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 415,
+                  "statusText": "Unsupported Media Type"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "test",
+                  "user_LoginEmail": "",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "test",
+                  "user_LoginEmail": "abc",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "1234",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "test",
+                  "user_LoginEmail": "@@@##",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "",
+                  "user_LoginEmail": "",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "###%%",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 400,
+                  "statusText": "Bad Request"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "1234",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"GET",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "abcd123@",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "user_password": "March@2025",
+                  "user_LoginEmail": "sdetorganizer@gmail.com",
+                  "Endpoint": "login",
+                  "authType": "No Auth",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+
+         {
+            "name": "Logout",
+            "data": [
+               {
+                  "method":"GET",
+                  "Endpoint": "logoutlms",
+                  "authType": "No Auth",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"GET",
+                  "Endpoint": "logoutlms",
+                  "authType": "Invalid Bearer token",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"POST",
+                  "Endpoint": "logoutlms",
+                  "authType": "Bearer Token",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"GET",
+                  "Endpoint": "logout123",
+                  "authType": "Bearer Token",
+                  "statusCode": 404,
+                  "statusText": "Not Found"
+               },
+               {
+                  "method":"GET",
+                  "Endpoint": "logoutlms",
+                  "authType": "Bearer Token",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+         {
+            "name": "Add New Program with Mandatory fields",
+            "data": [
+            
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "programStatus": "Active",
+                  "authType": "Bearer Token",
+                  "Endpoint": "saveprogram",
+                  "statusCode": 201,
+                  "statusText": "Created"
+               }
+            ]
+         },
+         {
+            "name": "Add New Program with all fields",
+            "data": [
+               
+               {
+                  "method":"POST",
+                  "contentType":"application/json",                  
+                  "programDescription": "program with All fields",
+                  "programStatus": "Active",
+                  "authType": "Bearer Token",
+                  "Endpoint": "saveprogram",
+                  "statusCode": 201,
+                  "statusText": "Created"
+               }
+            ]
+         },
+         {
+          "name": "get all programs",
+          "data": [
+
+            
+             
+           
+             {
+                "method":"GET",
+                "authType": "Invalid Bearer token",
+                "Endpoint": "allPrograms",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+             },
+             {
+                "method":"POST",
+                "authType": "Bearer Token",
+                "Endpoint": "allPrograms",
+                "statusCode": 405,
+                "statusText": "Method Not Allowed"
+             },
+             {
+                "method":"GET",
+                "authType": "Bearer Token",
+                "Endpoint": "allProg",
+                "statusCode": 404,
+                "statusText": "Not Found"
+             }
+            ]
+          },
+
+          {
+            "name": "GET All Programs with Users",
+            "data": [
+               {
+                  "method":"GET",
+                  "authType": "No Auth",
+                  "Endpoint": "allProgramsWithUsers",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+              },
+               {
+                  "method":"GET",
+                  "authType": "Invalid Bearer token",
+                  "Endpoint": "allProgramsWithUsers",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"POST",
+                  "authType": "Bearer Token",
+                  "Endpoint": "allProgramsWithUsers",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "allPrograWit",
+                  "statusCode": 404,
+                  "statusText": "Not Found"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "allProgramsWithUsers",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+         {
+            "name": "GET Program by ProgramId",
+            "data": [
+               {
+                  "method":"GET",
+                  "authType": "No Auth",
+                  "Endpoint": "programs/{{programId1}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+              },
+               {
+                  "method":"GET",
+                  "authType": "Invalid Bearer token",
+                  "Endpoint": "programs/{{programId1}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"POST",
+                  "authType": "Bearer Token",
+                  "Endpoint": "programs/{{programId1}}",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "programs/{{invalidProgramId}}",
+                  "statusCode": 404,
+                  "statusText": "Not Found"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "programs/{{programId1}}",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+         {
+          "name": "Update Program by ProgramName",
+          "data": [
+          
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Invalid Bearer token",
+                "Endpoint": "program/{{programName1}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "method":"GET",
+                "contentType":"application/json",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "program/{{programName1}}",
+                "statusCode": 405,
+                "statusText": "Method Not Allowed"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/xml",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "program/{{programName1}}",
+                "statusCode": 415,
+                "statusText": "Unsupported Media Type"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "prog",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "program/{{invalidProgramName}}",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "111",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "program/{{programName1}}",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program name with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "program/{{programName1}}",
+                "statusCode": 200,
+                "statusText": "OK"
+              }
+          ]
+       },
+         {
+          "name": "Update Program by ProgramId",
+          "data": [
+             {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program details with All fields",
+                "programStatus": "Active",
+                "authType": "No Auth",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program details with All fields",
+                "programStatus": "Active",
+                "authType": "Invalid Bearer token",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "method":"GET",
+                "contentType":"application/json",                  
+                "programDescription": "prog details with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 405,
+                "statusText": "Method Not Allowed"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/xml",                  
+                "programDescription": "prog details with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 415,
+                "statusText": "Unsupported Media Type"
+              },
+             {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program details with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogra",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "program details with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogram/{{invalidProgramId}}",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "111",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "method":"PUT",
+                "contentType":"application/json",                  
+                "programDescription": "prog details with All fields",
+                "programStatus": "Active",
+                "authType": "Bearer Token",
+                "Endpoint": "putprogram/{{programId1}}",
+                "statusCode": 200,
+                "statusText": "OK"
+              }
+          ]
+       },
+         {
+            "name": "Delete Program By ProgramID",
+            "data": [
+               {
+                  "method":"DELETE",
+                  "authType": "No Auth",
+                  "Endpoint": "deletebyprogid/{{programId1}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+              },
+               {
+                  "method":"DELETE",
+                  "authType": "Invalid Bearer token",
+                  "Endpoint": "deletebyprogid/{{programId1}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogid/{{programId1}}",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"DELETE",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogid/{{invalidProgramId}}",
+                  "statusCode": 404,
+                  "statusText": "Not Found"
+               },
+               {
+                  "method":"DELETE",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogid/{{programId1}}",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+         {
+            "name": "Delete Program By ProgramName",
+            "data": [
+               {
+                  "method":"DELETE",
+                  "authType": "No Auth",
+                  "Endpoint": "deletebyprogname/{{programName2}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+              },
+               {
+                  "method":"DELETE",
+                  "authType": "Invalid Bearer token",
+                  "Endpoint": "deletebyprogname/{{programName2}}",
+                  "statusCode": 401,
+                  "statusText": "Unauthorized"
+               },
+               {
+                  "method":"GET",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogname/{{programName2}}",
+                  "statusCode": 405,
+                  "statusText": "Method Not Allowed"
+               },
+               {
+                  "method":"DELETE",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogname/{{invalidProgramName}}",
+                  "statusCode": 404,
+                  "statusText": "Not Found"
+               },
+               {
+                  "method":"DELETE",
+                  "authType": "Bearer Token",
+                  "Endpoint": "deletebyprogname/{{programName2}}",
+                  "statusCode": 200,
+                  "statusText": "OK"
+               }
+            ]
+         },
+        
+         
+         {
+            "name": "Create New Batch",
+            "data": [
+              {
+                "scenario": "Create a batch with an inactive program",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchName": "EndpointExplorers",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",      
+                "programId": 16225,
+                "programName": "Java SpringBoot",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "Create a batch with an already existing program name",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchName": "EndpointExplorers",
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "programId": "{{programId2}}",
+                "programName": "{{programName1}}",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "Create a batch with an invalid program ID",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchName": "EndpointExplorers",
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "programId": "AAA",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "Create a batch with 'No of Classes' field blank",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchName": "EndpointExplorers",
+                "batchNoOfClasses": null,
+                "batchStatus": "Active",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "Create a batch with numeric batch name",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchName": 12345,
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "Create a batch with same program name and different program ID",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchName": "EndpointExplorers1",
+                "batchDescription": "created by Team8  postman EndpointExplorers",
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "programId": "{{programId2}}",
+                "statusCode": 201,
+                "statusText": "Created"
+              },
+              
+            
+              {
+                "scenario": "Create a batch with authorization and valid data",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                
+                "batchDescription": "created by Team8 EndpointExplorers postman ",
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "statusCode": 201,
+                "statusText": "Created"
+              }
+            ]
+          },
+          {
+            "name": "Create New Batch2",
+            "data": [
+              {
+                "scenario": "Create a batch with empty batch description",
+                "authType": "Bearer Token",
+                "method": "POST",
+                "url": "valid",
+                "endpoint": "batches",
+                "batchDescription": null,
+                "batchNoOfClasses": 10,
+                "batchStatus": "Active",
+                "statusCode": 201,
+                "statusText": "Created"
+              }
+            ]
+          },
+          {
+            "name": "Get All Batches",
+            "data": [
+              {
+                "scenario": "Retrieve all batches without authorization",
+                "authType": "No auth",
+                "method": "GET",
+                "url": "valid",
+                "endpoint": "batches",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "Retrieve all batches with authorization and invalid endpoint",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "url": "valid",
+                "endpoint": "batche",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "scenario": "Retrieve all batches with authorization",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "url": "valid",
+                "endpoint": "batches",
+                "statusCode": 200,
+                "statusText": "OK"
+              }
+            ]
+          },
+          {
+            "name": "Get Batch by BatchId",
+            "data": [
+              {
+                "scenario": "Retrieve batch by batch ID without authorization",
+                "authType": "No auth",
+                "method": "GET",
+                "endpoint": "batches/batchId/{{batchId2}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "Retrieve batch by batch ID with invalid Endpoint",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/batchId/a",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "scenario": "Retrieve batch by batch ID with authorization",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/batchId/{{batchId2}}",
+                "statusCode": 200,
+                "statusText": "OK"
+              }
+            
+            ]
+          },
+    
+          {
+            "name": "Get Batch by Batchname",
+            "data": [
+              {
+                "scenario": "Retrieve batch by batchName without authorization",
+                "authType": "No auth",
+                "method": "GET",
+                "endpoint": "batches/batchName/{{batchName2}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "Retrieve batch by batchName with authorization",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/batchName/{{batchName2}}",
+                "statusCode": 200,
+                "statusText": "OK"
+              },
+              {
+                "scenario": "Retrieve batch by batchName with invalid Endpoint",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/batchName/s",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              }
+            
+            ]
+          },
+    
+          {
+            "name": "Get Batch by ProgramId",
+            "data": [
+              {
+                "scenario": "Retrieve all batches without authorization",
+                "authType": "No Auth",
+                "method": "GET",
+                "endpoint": "batches/program/{{programId1}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "Retrieve all batches with authorization",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/program/{{programId1}}",
+                "statusCode": 200,
+                "statusText": "OK"
+              },
+             
+              {
+                "scenario": "Retrieve all batches with invalid endpoint",
+                "authType": "Bearer Token",
+                "method": "GET",
+                "endpoint": "batches/program/s",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              }
+            ]
+          },
+          {
+            "name": "Update Batch by batchId",
+            "data": [
+              {
+                "scenario": "update batch without authorization",
+                "authType": "No Auth",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": "created by Team8 EndpointExplorers",
+                "batchStatus": "Active",
+                "batchNoOfClasses": 45,
+            
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "update batch with inactive program",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": "created by Team8 EndpointExplorers",
+                "batchStatus": "Active",
+                "batchNoOfClasses": 45,
+                "programId": 16225,
+                "programName": "Java SpringBoot",
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "update batch without program name ",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": "updated by Team8 EndpointExplorers",
+                "batchStatus": "Active",
+                "batchNoOfClasses": 45,
+               
+                "programName": null,
+                "statusCode":200,
+                "statusText": "Ok"
+              },
+              {
+                "scenario": "update batch with invalidEndpoint",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/1",
+                "batchDescription": "updated by Team8 EndpointExplorers",
+                "batchStatus": "Active",
+                "batchNoOfClasses": 45,
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "scenario": "update batch without batchstatus",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": "updated by Team8 EndpointExplorers",
+                "batchStatus": null,
+                "batchNoOfClasses": 45,
+                "statusCode": 400,
+                "statusText": "Bad Request"
+              },
+              {
+                "scenario": "update batch with description field empty",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": null,
+                "batchStatus": "Active",
+                "batchNoOfClasses": 45,
+                "statusCode": 200,
+                "statusText": "Ok"
+              },
+              {
+                "scenario": "update batch with authorization",
+                "authType": "Bearer Token",
+                "method": "PUT",
+                "endpoint": "batches/{{batchId2}}",
+                "batchDescription": "updated by Team8 EndpointExplorers",
+                "batchStatus": "Active",
+                "batchNoOfClasses": 50,
+                "statusCode": 200,
+                "statusText": "Ok"
+              }
+            ]
+          },
+          {
+            "name": "Delete Batch by BatchId",
+            "data": [
+              {
+                "scenario": "Delete batch without authorization",
+                "authType": "No Auth",
+                "method": "DELETE",
+                "endpoint": "batches/{{batchId2}}",
+                "statusCode": 401,
+                "statusText": "Unauthorized"
+              },
+              {
+                "scenario": "Delete batch by invalid batchid",
+                "authType": "Bearer Token",
+                "method": "DELETE",
+                "endpoint": "batches/1",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "scenario": "Delete batch by invalid Endpoint",
+                "authType": "Bearer Token",
+                "method": "DELETE",
+                "endpoint": "batches/s",
+                "statusCode": 404,
+                "statusText": "Not Found"
+              },
+              {
+                "scenario": "Delete batch by valid batchid",
+                "authType": "Bearer Token",
+                "method": "DELETE",
+                "endpoint": "batches/{{batchId2}}",
+                "statusCode": 200,
+                "statusText": "ok"
+              }
+            ]
+          } ,
+        {
+          "name": "Create New User",
+          "data": [
+            {
+              "scenario": "Create a User with authorization",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+  
+              "statusCode": 201,
+              "statusText": "Created"
+            },
+            {
+              "name": "Create New User2",
+              "data": [
+                {
+                  "scenario": "Create a User with authorization and only manadatory fields",
+                  "authType": "Bearer Token",
+                  "method": "POST",
+                  "url": "valid",
+                  "endpoint": "users/roleStatus",
+                  "fname": "TeamEightEndPntExp",
+                  "lname": "H",
+                  "linkedinUrl": "www.linkedin.com",
+                  "phnum": "+91 4594444467",
+                  "userRoleMaps": [
+                    {
+                      "roleId": "R02",
+                      "userRoleStatus": "Active"
+                    }
+                  ],
+                  "timeZone": "CST",
+                  "visaStatus": "H4",
+                  "userLogin": {
+                    "loginStatus": "Active",
+                    "userLoginEmail": " "
+                  },
+  
+                  "statusCode": 201,
+                  "statusText": "Created"
+                }
+              ]
+            },
+  
+            {
+              "scenario": "Create a User with invalid endpoint",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "usersss/roleStatus",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": " "
+              },
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Create a User with manadatory and additional fields",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+  
+              "statusCode": 201,
+              "statusText": "Created"
+            },
+            {
+              "scenario": "Create a User with missing required fields",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User with an already existing phone num",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4081234322",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User with invalid data - special characters",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEight&#@*EndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              }
+            },
+  
+            {
+              "scenario": "Create a batch with expired token",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+  
+              "statusCode": 401,
+              "statusText": "Unauthorized"
+            },
+            {
+              "scenario": "Create a User with put request",
+              "authType": "Bearer Token",
+              "method": "PUT",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+  
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User with empty request body",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User when server is down",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "Active"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+  
+              "statusCode": 500,
+              "statusText": "Internal Server Error"
+            },
+           
+            {
+              "scenario": "Create a User with an Inactive role status ",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "InActive"
+                }
+              ],
+              "timeZone": "CST",
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User with 'Time Zone' field blank",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "InActive"
+                }
+              ],
+              "timeZone": null,
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            },
+            {
+              "scenario": "Create a User with numeric value in firstname",
+              "authType": "Bearer Token",
+              "method": "POST",
+              "url": "valid",
+              "endpoint": "users/roleStatus",
+              "comments": "SDET",
+              "pg": "B.E",
+              "ug": "M.S",
+              "fname": "123TeamEightEndPntExp",
+              "lname": "H",
+              "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+              "userLocation": "USA",
+              "mname": "string",
+              "phnum": "+91 4594444467",
+              "userRoleMaps": [
+                {
+                  "roleId": "R02",
+                  "userRoleStatus": "InActive"
+                }
+              ],
+              "timeZone": null,
+              "visaStatus": "H4",
+              "userLogin": {
+                "loginStatus": "Active",
+                "userLoginEmail": "TeamEightEndPntExp@gmail.com"
+              },
+              "statusCode": 400,
+              "statusText": "Bad Request"
+            }
+          ]
+        },
+  
+        {
+          "name": "Get All Users",
+          "data": [
+            {
+              "scenario": "Retrieve all Users with authorization",
+  
+              "endpoint": "/users",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+            {
+              "scenario": "Retrieve all batches with authorization and invalid endpoint",
+  
+              "endpoint": "/usersss",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get User By UserId",
+          "data": [
+            {
+              "scenario": "Retrieve User by UserId with authorization",
+  
+              "method": "GET",
+              "endpoint": "users/{{nuserId}}",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve User by UserId with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "uuusers/{{nuserId}}",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve User by UserId with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "users/{{nuserId}}@@@",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get All Active Users",
+          "data": [
+            {
+              "scenario": "Retrieve All Active Users with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/activeUsers",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve All Active Users with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/activeUserssss",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve All Active Users with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/activeUsers**##",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get All User Emails",
+          "data": [
+            {
+              "scenario": "Retrieve All User Emails with authorization",
+  
+              "method": "GET",
+              "endpoint": "/fetch-emails",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve All User Emails with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/fetch-ememails",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve All User Emails with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/fetch-emails**##",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get All Roles",
+          "data": [
+            {
+              "scenario": "Retrieve All Roles with authorization",
+  
+              "method": "GET",
+              "endpoint": "/roles",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve All Roles with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/rolesssss",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve All Roles with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/roles**##",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get All Users With Roles",
+          "data": [
+            {
+              "scenario": "Retrieve All Users With Roles with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/roles",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve All Users With Roles with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/roleeles",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve All Users With Roles with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/roles**##",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get Count of Active And Inactive Users",
+          "data": [
+            {
+              "scenario": "Retrieve Count of Active And Inactive Users with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/byStatus",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve Count of Active And Inactive Users with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/BYStatus",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Count of Active And Inactive Users with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/byStatus**##",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get Users By Pgm Batches",
+          "data": [
+            {
+              "scenario": "Retrieve Users By Pgm Batches with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/programBatch/9586",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve Users By Pgm Batches with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/PROrogramBatch/9586",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users By Pgm Batches with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/programBatch/9586",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users By Pgm Batches with invalid pgm id",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/programBatch/95*6",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get Users For Pgm",
+          "data": [
+            {
+              "scenario": "Retrieve Users For Program with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/programs/16208",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve Users For Program with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/proGRams/16208",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users For Program with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/prog&&ams/16208",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users For Program with invalid pgm id",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/programBatch/1620$$8",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Get Users By RoleId",
+          "data": [
+            {
+              "scenario": "Retrieve Users By RoleId with authorization",
+  
+              "method": "GET",
+              "endpoint": "/users/roles/R03",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve Users By RoleId with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/rolesSS/R03",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users By RoleId with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/role$$s/R03",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users By RoleId with invalid role id",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/users/roles/R05",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Gets Users By RoleId V2",
+          "data": [
+            {
+              "scenario": "Retrieve Users By RoleId V2 with authorization",
+  
+              "method": "GET",
+              "endpoint": "/v2/users",
+              "statusCode": 200,
+              "statusText": "OK"
+            },
+  
+            {
+              "scenario": "Retrieve Users By RoleId V2 with invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/V2/Usersss",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Retrieve Users By RoleId V2 with special characters",
+              "authType": "Bearer Token",
+              "method": "GET",
+              "endpoint": "/v2/user##$s",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Delete User By UserId",
+          "data": [
+            {
+              "scenario": "Delete User without authorization",
+              "authType": "No Auth",
+              "method": "DELETE",
+              "endpoint": "/users/{{nuserId}}",
+              "statusCode": 401,
+              "statusText": "Unauthorized"
+            },
+            {
+              "scenario": "Delete User by invalid batchid",
+              "authType": "Bearer Token",
+              "method": "DELETE",
+              "endpoint": "/users/{{nuserId}}",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            },
+            {
+              "scenario": "Delete User by invalid Endpoint",
+              "authType": "Bearer Token",
+              "method": "DELETE",
+              "endpoint": "/users/{{nuserId}}",
+              "statusCode": 404,
+              "statusText": "Not Found"
+            }
+          ]
+        },
+        {
+          "name": "Update User",
+          "data": [
+            {
+              "scenario": "uPDATE User with authorization",
+              "authType": "Bearer Token",
+              "method": "PUT",
+              "endpoint": "/users/{{nuserId}}",
+              "userComments": "",
+              "userEduPg": "string",
+              "userEduUg": "string",
+              "userFirstName": "EndpntExpTefdfamEightShrutiUpdated",
+              "userId": "{{nuserId}}",
+              "userLastName": "H",
+              "userMiddleName": "string",
+              "userLinkedinUrl": "www.linkedin.com/EndpntExpTedfdamEightShrutiUpdated/12345",
+              "updateLocation": "string",
+              "userLoginEmail": "EndpntExpTeamEightShdsdsrutiUpdated@gmail.com",
+              "userPhoneNumber": "+91 4030211221",
+              "userTimeZone": "CST",
+              "userVisaStatus": "H4",
+              "statusCode": 200,
+              "statusText": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Update User Role Pgm Batch Status",
+          "data": [
+            {
+              "scenario": "Update Update User Role Pgm Batch Status with authorization",
+              "authType": "Bearer Token",
+              "method": "PUT",
+              "endpoint": "/users/roleProgramBatchdsStatus/{{nuserId}}",
+              "programId": "{{pgmId}}",
+              "roleIdPgmBatch": "R02",
+              "userIdforupdate": "{{nuserId}}",
+              "userRoleProgramBatches": [
+                {
+                  "batchId": "{{batchid}}",
+                  "userRoleProgramBatchStatus": "Active"
+                }
+              ],
+              "statusCode": 200,
+              "statusText": "OK"
+            }
+          ]
+        },
+        {
+          "name": "Update User Login Status",
+          "data": [
+            {
+              "scenario": "Update User Login Status with authorization",
+              "authType": "Bearer Token",
+              "method": "PUT",
+              "endpoint": "/users/userLogin/{{nuserId}}",
+              "updateUserLoginEmail": "ShrutiHTdsdseamNN1235@gmail.com",
+               "updateloginStatus": "Active",
+               "updateStatus": "Active",
+              "statusCode": 200,
+              "statusText": "OK"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  
