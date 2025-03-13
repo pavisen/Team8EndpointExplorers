@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "57aa222a-55ee-4f31-adfd-ae09410ba8c1",
-		"name": "Team8_Endpoint_Explorers_Lms_Hackathon Copy",
+		"_postman_id": "4fc09dea-e9e1-48f3-a54c-2d6c19879d28",
+		"name": "Team8_Endpoint_Explorers_Lms_Hackathon Copy 3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40503761"
+		"_exporter_id": "33096544",
+		"_collection_link": "https://blue-rocket-77491.postman.co/workspace/My-Workspace~f796750f-b02e-40a1-840d-2ab9c3b9172a/collection/33096544-4fc09dea-e9e1-48f3-a54c-2d6c19879d28?action=share&source=collection_link&creator=33096544"
 	},
 	"item": [
 		{
@@ -634,7 +635,7 @@
 			"name": "Batch Module",
 			"item": [
 				{
-					"name": "Retrive All Batches",
+					"name": "Get All Batches",
 					"event": [
 						{
 							"listen": "test",
@@ -905,7 +906,7 @@
 									"\r",
 									"\r",
 									"// Schema validation\r",
-									"if (pm.response.code === 201) {\r",
+									"if (pm.response.code === 200) {\r",
 									"    const batchSchema = {\r",
 									"        \"$ref\": \"#/definitions/BatchResponse\",\r",
 									"        \"definitions\": {\r",
@@ -1009,7 +1010,7 @@
 									"\r",
 									"\r",
 									"// Schema validation\r",
-									"if (pm.response.code === 201) {\r",
+									"if (pm.response.code === 200) {\r",
 									"    const batchSchema = {\r",
 									"        \"$ref\": \"#/definitions/BatchResponse\",\r",
 									"        \"definitions\": {\r",
@@ -1146,7 +1147,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrive Batch by BatchId",
+					"name": "Get Batch by BatchId",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1170,7 +1171,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrive Batch by Batchname",
+					"name": "Get Batch by Batchname",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -1216,7 +1217,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrive Batch by ProgramId",
+					"name": "Get Batch by ProgramId",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2768,221 +2769,7 @@
 							"response": []
 						},
 						{
-							"name": "Create New User2",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"",
-											"let userRoleMaps = pm.variables.get('userRoleMaps');",
-											"",
-											"// Parse the JSON string if it is a string (optional depending on your setup)",
-											"if (typeof userRoleMaps === 'string') {",
-											"    userRoleMaps = JSON.parse(userRoleMaps);",
-											"}",
-											"console.log(userRoleMaps);  // For debugging",
-											"",
-											"let firstRoleId = userRoleMaps[0].roleId;",
-											"let firstUserRoleStatus = userRoleMaps[0].userRoleStatus;",
-											"",
-											"pm.collectionVariables.set('roleId', firstRoleId);",
-											"pm.collectionVariables.set('userRoleStatus', firstUserRoleStatus);",
-											"pm.collectionVariables.set(\"loginStatus\", pm.iterationData.get(\"userLogin.loginStatus\"));",
-											"pm.collectionVariables.set(\"userLoginEmail\", pm.iterationData.get(\"userLogin.userLoginEmail\"));",
-											"",
-											"",
-											"",
-											"",
-											"// pm.collectionVariables.set(\"loginStatus\", data[\"userLogin\"]['loginStatus']);",
-											"// pm.collectionVariables.set(\"userLoginEmail\", data[\"userLogin\"]['userLoginEmail']);",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"var actualcode = pm.response.code;",
-											"//pm.environment.set(\"newuserName\",jsonData.user_first_name);",
-											"//pm.expect(actualcode).equals(\"{{statusCode}}\")",
-											"",
-											"if(actualcode === \"{{statusCode}}\"){",
-											"pm.test(\"Status code is 201\", function () {",
-											"    pm.response.to.have.status(201);",
-											"  ",
-											"    pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Created\");",
-											"});",
-											"});",
-											"}",
-											"else if (actualcode === \"{{statusCode}}\"){",
-											"    pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"    ",
-											"});",
-											"pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Bad Request\");",
-											"});",
-											"}",
-											"else if (actualcode === \"{{statusCode}}\"){",
-											"     pm.test(\"Status code is 409\", function () {",
-											"    pm.response.to.have.status(409);",
-											"    ",
-											"});",
-											"pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Conflict\");",
-											"});",
-											"}",
-											"",
-											"// Header validation",
-											"pm.test(\"Content-Type should be application/json\", function () {",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");",
-											"});",
-											"",
-											"var jsonData = pm.response.json();",
-											" var userIdResp = jsonData.userId;",
-											" console.log(\"user object\" + jsonData.user);",
-											" console.log(\"Extracted userId: \" + userIdResp);",
-											" pm.environment.set(\"nuserId\",userIdResp);",
-											"",
-											"if (pm.response.code == 201){",
-											"    const schema = {",
-											"  \"properties\": {",
-											"    \"user\": {",
-											"      \"type\": \"object\",",
-											"      \"properties\": {",
-											"        \"userId\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userFirstName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLastName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userMiddleName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userPhoneNumber\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLocation\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userTimeZone\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLinkedinUrl\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduUg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduPg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userComments\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userVisaStatus\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLoginEmail\": {",
-											"          \"type\": \"string\"",
-											"        }",
-											"      },",
-											"      \"required\": [",
-											"        \"userId\",",
-											"        \"userFirstName\",",
-											"        \"userLastName\",",
-											"        \"userMiddleName\",",
-											"        \"userPhoneNumber\",",
-											"        \"userLocation\",",
-											"        \"userTimeZone\",",
-											"        \"userLinkedinUrl\",",
-											"        \"userEduUg\",",
-											"        \"userEduPg\",",
-											"        \"userComments\",",
-											"        \"userVisaStatus\",",
-											"        \"userLoginEmail\"",
-											"      ]",
-											"    },",
-											"    \"roles\": {",
-											"      \"type\": \"array\",",
-											"      \"items\": [",
-											"        {",
-											"          \"type\": \"object\",",
-											"          \"properties\": {",
-											"            \"roleId\": {",
-											"              \"type\": \"string\"",
-											"            },",
-											"            \"userRoleStatus\": {",
-											"              \"type\": \"string\"",
-											"            }",
-											"          },",
-											"          \"required\": [",
-											"            \"roleId\",",
-											"            \"userRoleStatus\"",
-											"          ]",
-											"        }",
-											"      ]",
-											"    }",
-											"  },",
-											"  \"required\": [",
-											"    \"user\",",
-											"    \"roles\"",
-											"  ]",
-											"}",
-											"",
-											"",
-											"    ",
-											"     ",
-											"",
-											" pm.test('Validate schema',()=>{",
-											"            pm.response.to.have.jsonSchema(schema);",
-											"        });",
-											"",
-											"       }",
-											"       ",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"userComments\": \"{{comments}}\",\n\"userEduPg\": \"{{pg}}\",\n\"userEduUg\": \"{{ug}}\",\n\"userFirstName\": \"{{fname}}\",\n\"userLastName\": \"{{lname}}\",\n\"userLinkedinUrl\": \"{{linkedinUrl}}\",\n\"userLocation\": \"{{userLocation}}\",\n\"userMiddleName\": \"{{mname}}\",\n\"userPhoneNumber\": \"{{phnum}}\",\n\"userRoleMaps\": [\n{\n\"roleId\": \"{{roleId}}\",\n\"userRoleStatus\":\"{{userRoleStatus}}\"\n}\n],\n\"userTimeZone\": \"{{timeZone}}\",\n\"userVisaStatus\": \"{{visaStatus}}\",\n\"userLogin\": {\n\"loginStatus\" : \"{{loginStatus}}\",\n\"userLoginEmail\": \"{{userLoginEmail}}\"\n}\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleStatus",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleStatus"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GetUserByUserId",
+							"name": "Get User By UserId",
 							"event": [
 								{
 									"listen": "test",
@@ -3215,7 +3002,7 @@
 							"response": []
 						},
 						{
-							"name": "CreatePgm",
+							"name": "Create Pgm",
 							"event": [
 								{
 									"listen": "test",
@@ -3264,7 +3051,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateBatch",
+							"name": "Create Batch",
 							"event": [
 								{
 									"listen": "test",
@@ -3305,81 +3092,6 @@
 									],
 									"path": [
 										"batches"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update User Role Pgm Batch Status",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"// Fixed TypeError for checking 'true' inclusion",
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											"var jsonData = pm.response.json();",
-											"var success = jsonData.success;",
-											"pm.expect(success).to.equal(true);",
-											"pm.test(\"Response message is true\");",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"let userRoleProgramBatches = pm.variables.get('userRoleProgramBatches');",
-											"",
-											"// Parse the JSON string if it is a string (optional depending on your setup)",
-											"if (typeof userRoleProgramBatches === 'string') {",
-											"    userRoleProgramBatches = JSON.parse(userRoleProgramBatches);",
-											"}",
-											"  ",
-											"",
-											"let firstRolePgmBatch = userRoleProgramBatches[0].batchId;",
-											"let firstUserRolePgmBatchStatus = userRoleProgramBatches[0].userRoleProgramBatchStatus;",
-											"",
-											"pm.collectionVariables.set('batchId', firstRolePgmBatch);",
-											"pm.collectionVariables.set('userRoleProgramBatchStatus', firstUserRolePgmBatchStatus);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"programId\": \"{{pgmId}}\",\n\"roleId\": \"{{roleIdPgmBatch}}\",\n\"userId\": \"{{userIdforupdate}}\",\n\"userRoleProgramBatches\": [\n{\n\"batchId\": \"{{batchid}}\",\n\"userRoleProgramBatchStatus\":\"{{userRoleProgramBatchStatus}}\"\n}\n]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleProgramBatchStatus/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleProgramBatchStatus",
-										"{{nuserId}}"
 									]
 								}
 							},
@@ -3421,14 +3133,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{lmsBaseUrl}}/users/userLogin/{{nuserId}}",
+									"raw": "{{lmsBaseUrl}}{{endpoint}}",
 									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"userLogin",
-										"{{nuserId}}"
+										"{{lmsBaseUrl}}{{endpoint}}"
 									]
 								}
 							},
@@ -3457,743 +3164,9 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{lmsBaseUrl}}/users/",
+									"raw": "{{lmsBaseUrl}}{{endpoint}}",
 									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "POST Copy",
-					"item": [
-						{
-							"name": "Create New User",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"",
-											"let userRoleMaps = pm.variables.get('userRoleMaps');",
-											"",
-											"// Parse the JSON string if it is a string (optional depending on your setup)",
-											"if (typeof userRoleMaps === 'string') {",
-											"    userRoleMaps = JSON.parse(userRoleMaps);",
-											"}",
-											"console.log(userRoleMaps);  // For debugging",
-											"",
-											"let firstRoleId = userRoleMaps[0].roleId;",
-											"let firstUserRoleStatus = userRoleMaps[0].userRoleStatus;",
-											"",
-											"pm.collectionVariables.set('roleId', firstRoleId);",
-											"pm.collectionVariables.set('userRoleStatus', firstUserRoleStatus);",
-											"",
-											"",
-											"pm.collectionVariables.set(\"loginStatus\", data[\"userLogin\"]['loginStatus']);",
-											"pm.collectionVariables.set(\"userLoginEmail\", data[\"userLogin\"]['userLoginEmail']);",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"var actualcode = pm.response.code;",
-											"//pm.environment.set(\"newuserName\",jsonData.user_first_name);",
-											"//pm.expect(actualcode).equals(\"{{statusCode}}\")",
-											"",
-											"if(actualcode === \"{{statusCode}}\"){",
-											"pm.test(\"Status code is 201\", function () {",
-											"    pm.response.to.have.status(201);",
-											"  ",
-											"    pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Created\");",
-											"});",
-											"});",
-											"}",
-											"else if (actualcode === \"{{statusCode}}\"){",
-											"    pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"    ",
-											"});",
-											"pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Bad Request\");",
-											"});",
-											"}",
-											"else if (actualcode === \"{{statusCode}}\"){",
-											"     pm.test(\"Status code is 409\", function () {",
-											"    pm.response.to.have.status(409);",
-											"    ",
-											"});",
-											"pm.test(\"status line \", function () {",
-											"    pm.expect(pm.response.status).to.include(\"Conflict\");",
-											"});",
-											"}",
-											"",
-											"// Header validation",
-											"pm.test(\"Content-Type should be application/json\", function () {",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");",
-											"});",
-											"",
-											"var jsonData = pm.response.json();",
-											" var userIdResp = jsonData.user.userId;",
-											" console.log(\"user object\" + jsonData.user);",
-											" console.log(\"Extracted userId: \" + userIdResp);",
-											" pm.environment.set(\"nuserId\",userIdResp);",
-											"",
-											"if (pm.response.code == 201){",
-											"    const schema = {",
-											"  \"properties\": {",
-											"    \"user\": {",
-											"      \"type\": \"object\",",
-											"      \"properties\": {",
-											"        \"userId\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userFirstName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLastName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userMiddleName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userPhoneNumber\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLocation\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userTimeZone\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLinkedinUrl\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduUg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduPg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userComments\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userVisaStatus\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLoginEmail\": {",
-											"          \"type\": \"string\"",
-											"        }",
-											"      },",
-											"      \"required\": [",
-											"        \"userId\",",
-											"        \"userFirstName\",",
-											"        \"userLastName\",",
-											"        \"userMiddleName\",",
-											"        \"userPhoneNumber\",",
-											"        \"userLocation\",",
-											"        \"userTimeZone\",",
-											"        \"userLinkedinUrl\",",
-											"        \"userEduUg\",",
-											"        \"userEduPg\",",
-											"        \"userComments\",",
-											"        \"userVisaStatus\",",
-											"        \"userLoginEmail\"",
-											"      ]",
-											"    },",
-											"    \"roles\": {",
-											"      \"type\": \"array\",",
-											"      \"items\": [",
-											"        {",
-											"          \"type\": \"object\",",
-											"          \"properties\": {",
-											"            \"roleId\": {",
-											"              \"type\": \"string\"",
-											"            },",
-											"            \"userRoleStatus\": {",
-											"              \"type\": \"string\"",
-											"            }",
-											"          },",
-											"          \"required\": [",
-											"            \"roleId\",",
-											"            \"userRoleStatus\"",
-											"          ]",
-											"        }",
-											"      ]",
-											"    }",
-											"  },",
-											"  \"required\": [",
-											"    \"user\",",
-											"    \"roles\"",
-											"  ]",
-											"}",
-											"",
-											"",
-											"    ",
-											"     ",
-											"",
-											" pm.test('Validate schema',()=>{",
-											"            pm.response.to.have.jsonSchema(schema);",
-											"        });",
-											"",
-											"       }",
-											"       ",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"userComments\": \"{{comments}}\",\n\"userEduPg\": \"{{pg}}\",\n\"userEduUg\": \"{{ug}}\",\n\"userFirstName\": \"{{fname}}\",\n\"userLastName\": \"{{lname}}\",\n\"userLinkedinUrl\": \"{{linkedinUrl}}\",\n\"userLocation\": \"{{userLocation}}\",\n\"userMiddleName\": \"{{mname}}\",\n\"userPhoneNumber\": \"{{phnum}}\",\n\"userRoleMaps\": [\n{\n\"roleId\": \"{{roleId}}\",\n\"userRoleStatus\":\"{{userRoleStatus}}\"\n}\n],\n\"userTimeZone\": \"{{timeZone}}\",\n\"userVisaStatus\": \"{{visaStatus}}\",\n\"userLogin\": {\n\"loginStatus\" : \"{{loginStatus}}\",\n\"userLoginEmail\": \"{{userLoginEmail}}\"\n}\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleStatus",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleStatus"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get User By UserId",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"var actualcode = pm.response.code;",
-											"//pm.environment.get(\"nuserId\");",
-											"",
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											"pm.test(\"Content-Type should be application/json\", function () {",
-											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");",
-											"});",
-											"",
-											"pm.test(\"status line\", function(){",
-											"    pm.expect(pm.response.status).to.include(\"OK\");",
-											"});",
-											"",
-											"if(pm.response.code !==200){",
-											"//postman.setNextRequest(\"next\");",
-											"pm.execution.setNextRequest()",
-											"}",
-											"  const schema = {",
-											"  \"items\": [",
-											"    {",
-											"      \"type\": \"object\",",
-											"      \"properties\": {",
-											"        \"userComments\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduPg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userEduUg\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userFirstName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userId\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLastName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLinkedinUrl\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLocation\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userMiddleName\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userPhoneNumber\": {",
-											"          \"type\": \"integer\"",
-											"        },",
-											"        \"userTimeZone\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userVisaStatus\": {",
-											"          \"type\": \"string\"",
-											"        },",
-											"        \"userLoginEmail\": {",
-											"          \"type\": \"string\"",
-											"        }",
-											"      },",
-											"      \"required\": [",
-											"        \"userComments\",",
-											"        \"userEduPg\",",
-											"        \"userEduUg\",",
-											"        \"userFirstName\",",
-											"        \"userId\",",
-											"        \"userLastName\",",
-											"        \"userLinkedinUrl\",",
-											"        \"userLocation\",",
-											"        \"userMiddleName\",",
-											"        \"userPhoneNumber\",",
-											"        \"userTimeZone\",",
-											"        \"userVisaStatus\",",
-											"        \"userLoginEmail\"",
-											"      ]",
-											"    }",
-											"  ]",
-											"}",
-											"pm.test('Validate schema',()=>{",
-											"    pm.response.to.have.jsonSchema(schema);",
-											"});",
-											"",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UpdateUser",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"//pm.environment.get(\"newUserId\");",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"userComments\": \"{{userComments}}\",\n\"userEduPg\": \"{{userEduPg}}\",\n\"userEduUg\": \"{{userEduUg}}\",\n\"userFirstName\": \"{{userFirstName}}\",\n\"userId\": \"{{nuserId}}\",\n\"userLastName\": \"{{userLastName}}\",\n\"userMiddleName\": \"{{userMiddleName}}\",\n\"userLinkedinUrl\": \"{{userLinkedinUrl}}\",\n\"userLocation\": \"{{updateLocation}}\",\n\"userLoginEmail\":\"{{userLoginEmail}}\",\n\"userPhoneNumber\": \"{{userPhoneNumber}}\",\n\"userTimeZone\": \"{{userTimeZone}}\",\n\"userVisaStatus\": \"{{userVisaStatus}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UpdateRoleId",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Body matches string\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"Role Id Updated for User\");",
-											"    ",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"userRoleList\": [\n{\n\"roleId\":\"{{roleId}}\",\n\"userRoleStatus\": \"{{userRoleStatus}}\"\n}\n]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleId/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleId",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CreatePgm",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(201);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											"",
-											"var jsonResp = pm.response.json();",
-											"var pgmIdResp = jsonResp.programId;",
-											"pm.environment.set(\"pgmId\",pgmIdResp);",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"programDescription\": \"{{programDescription}}\",\n\"programName\": \"{{programName}}\",\n\"programStatus\": \"{{programStatus}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/saveprogram",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"saveprogram"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CreateBatch",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											"var jsonResp = pm.response.json();",
-											"var batchIdResp = jsonResp.batchId;",
-											"pm.environment.set(\"batchid\",batchIdResp);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"batchDescription\":\"{{batchDescription}}\",\n\"batchName\":\"{{batchName}}\",\n\"batchNoOfClasses\": {{batchNoOfClasses}},\n\"batchStatus\": \"{{batchStatus}}\",\n\"programId\": \"{{pgmId}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/batches",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"batches"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UpdateUserRolePgmBatchStatus",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"// Fixed TypeError for checking 'true' inclusion",
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											"var jsonData = pm.response.json();",
-											"var success = jsonData.success;",
-											"pm.expect(success).to.equal(true);",
-											"pm.test(\"Response message is true\");",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"let userRoleProgramBatches = pm.variables.get('userRoleProgramBatches');",
-											"",
-											"// Parse the JSON string if it is a string (optional depending on your setup)",
-											"if (typeof userRoleProgramBatches === 'string') {",
-											"    userRoleProgramBatches = JSON.parse(userRoleProgramBatches);",
-											"}",
-											"  ",
-											"",
-											"let firstRolePgmBatch = userRoleProgramBatches[0].batchId;",
-											"let firstUserRolePgmBatchStatus = userRoleProgramBatches[0].userRoleProgramBatchStatus;",
-											"",
-											"pm.collectionVariables.set('batchId', firstRolePgmBatch);",
-											"pm.collectionVariables.set('userRoleProgramBatchStatus', firstUserRolePgmBatchStatus);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"programId\": \"{{pgmId}}\",\n\"roleId\": \"{{roleIdPgmBatch}}\",\n\"userId\": \"{{userIdforupdate}}\",\n\"userRoleProgramBatches\": [\n{\n\"batchId\": \"{{batchid}}\",\n\"userRoleProgramBatchStatus\":\"{{userRoleProgramBatchStatus}}\"\n}\n]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleProgramBatchStatus/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleProgramBatchStatus",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "UpdateUserLoginStatus",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
-											"",
-											" pm.test(\"Body matches string\", function () {",
-											"     pm.expect(pm.response.text()).to.include(\"Status Updated for User:\");",
-											"    });"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"userLoginEmail\": \"{{updateUserLoginEmail}}\",\n  \"loginStatus\": \"{{updateloginStatus}}\",\n  \"status\": \"{{updateStatus}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/userLogin/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"userLogin",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "DELETE",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/{{nuserId}}",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"{{nuserId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "New Request",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"userComments\": \"SDET at Numpy Ninja\",\n\"userEduPg\": \"B.E\",\n\"userEduUg\": \"M.E\",\n\"userFirstName\": \"123Andy\",\n\"userLastName\": \"H\",\n\"userLinkedinUrl\": \"www.linkedin.com/Andy1/1234\",\n\"userLocation\": \"string\",\n\"userMiddleName\": \"string\",\n\"userPhoneNumber\": \"+91 5606011223\",\n\"userRoleMaps\": [\n{\n\"roleId\": \"R03\",\n\"userRoleStatus\":\"Active\"\n}\n],\n\"userTimeZone\": \"string\",\n\"userVisaStatus\": \"H4\",\n\"userLogin\": {\n\"loginStatus\" : \"InActive\",\n\"userLoginEmail\": \"Andyssee1@gmail.com\"\n}\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/users/roleStatus",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"users",
-										"roleStatus"
+										"{{lmsBaseUrl}}{{endpoint}}"
 									]
 								}
 							},
@@ -5218,70 +4191,392 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Class CRUD Operation",
+			"item": [
+				{
+					"name": "create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//--------- Set the Content Type Header-----------\r",
+									"pm.request.headers.add({\r",
+									"    key: \"Content-Type\",\r",
+									"    value: pm.variables.get(\"contentType\")\r",
+									"});\r",
+									" \r",
+									"var statusCode = pm.variables.get(\"statusCode\");\r",
+									"console.log(\"statusCode \"+statusCode);\r",
+									"if(statusCode === 201){\r",
+									"var programName1 = \"ApiExplorers\"+ \"-\" + pm.variables.replaceIn('{{$randomFirstName}}');\r",
+									"pm.collectionVariables.set(\"programName1\", programName1);\r",
+									"}else{\r",
+									" pm.collectionVariables.set(\"programName1\", pm.variables.get(\"programName\"));  \r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									" \r",
+									"if(pm.variables.get(\"statusCode\")===201){\r",
+									"    var jsonData = pm.response.json();\r",
+									" \r",
+									" \r",
+									"const expectedSchema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"batchid\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"classtopic\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"classDescription\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"programStatus\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"creationTime\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"lastModTime\": {\r",
+									"      \"type\": \"string\"\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"programId\",\r",
+									"    \"programName\",\r",
+									"    \"programDescription\",\r",
+									"    \"programStatus\",\r",
+									"    \"creationTime\",\r",
+									"    \"lastModTime\"\r",
+									"  ]\r",
+									"}\r",
+									" \r",
+									" \r",
+									"// Get the status code of the response\r",
+									"var StatusCode = pm.response.code;\r",
+									"if(StatusCode === 201){\r",
+									" \r",
+									"    //calling jsonSchemaValidation methods\r",
+									"    eval(pm.environment.get(\"jsonSchemaValidation\"))();\r",
+									" \r",
+									"    pm.test(\"Validating Test Data Type Of the Response\", () => {\r",
+									"    pm.expect(jsonData).to.be.an(\"object\");\r",
+									"    pm.expect(jsonData.programId).to.be.a(\"number\");\r",
+									"    pm.expect(jsonData.programName).to.be.a(\"string\");\r",
+									"    pm.expect(jsonData.programDescription).to.be.a(\"string\");\r",
+									"    pm.expect(jsonData.programStatus).to.be.a(\"string\");\r",
+									"    });\r",
+									" \r",
+									"    pm.test(\"Validating ProgramName\", () => {\r",
+									"        pm.expect(jsonData.programName).to.equal(pm.collectionVariables.get(\"programName1\"));\r",
+									"    });\r",
+									"    pm.test(\"Validating Program Status\", () => {\r",
+									"        pm.expect(jsonData.programStatus).to.equal(pm.variables.get(\"programStatus\"));\r",
+									"    });\r",
+									" \r",
+									"pm.collectionVariables.set(\"programId1\",jsonData.programId);\r",
+									"pm.collectionVariables.set(\"programName1\",jsonData.programName);\r",
+									"}\r",
+									" \r",
+									"}\r",
+									" "
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lmsBaseUrl}}/CreateClassSchedule",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"CreateClassSchedule"
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "PUT",
-					"item": []
+					"name": "Get All claases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/allClasses",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"allClasses"
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "DELETE",
-					"item": []
+					"name": "Get All Upcoming classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/upcomingClasses/studentID/2",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"upcomingClasses",
+								"studentID",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get batch recording",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lmsBaseUrl}}/batchRecordings/8432",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"batchRecordings",
+								"8432"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Class  id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/class/131",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"class",
+								"131"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get batch program Invalid Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/batches",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"batches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get class topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/classes/super keywords",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"classes",
+								"super keywords"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get class  by batch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/classesbyBatch/8432",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"classesbyBatch",
+								"8432"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get class by staff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}/classesByStaff/U49",
+							"host": [
+								"{{lmsBaseUrl}}"
+							],
+							"path": [
+								"classesByStaff",
+								"U49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get class recording",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}{{endpoint}}",
+							"host": [
+								"{{lmsBaseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Class Recordings by ClassId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}{{endpoint}}",
+							"host": [
+								"{{lmsBaseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All classes with valid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}{{endpoint}}",
+							"host": [
+								"{{lmsBaseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
 			"name": "Logout",
-			"item": []
-		},
-		{
-			"name": "Logout",
-			"event": [
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"//     pm.test(\"Validating Status Code\", ()=> {",
-							"//     pm.expect(pm.response.code).to.eql(pm.variables.get(\"statusCode\"));",
-							"// });"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
+					"name": "Logout",
+					"event": [
 						{
-							"key": "token",
-							"value": "{{authToken}}",
-							"type": "string"
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//     pm.test(\"Validating Status Code\", ()=> {",
+									"//     pm.expect(pm.response.code).to.eql(pm.variables.get(\"statusCode\"));",
+									"// });"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lmsBaseUrl}}{{Endpoint}}",
+							"host": [
+								"{{lmsBaseUrl}}{{Endpoint}}"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}{{Endpoint}}",
-					"host": [
-						"{{baseUrl}}{{Endpoint}}"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"auth": {
@@ -5536,6 +4831,14 @@
 		},
 		{
 			"key": "userLoginEmail",
+			"value": ""
+		},
+		{
+			"key": "batchId",
+			"value": ""
+		},
+		{
+			"key": "userRoleProgramBatchStatus",
 			"value": ""
 		}
 	]

@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Team8_Endpoint_Explorers_Lms_Hackathon Copy" tests="138" time="10.903">
+  <testsuite name="Login / Login" id="3390303c-b9b4-4add-adf9-434947b4f681" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="7" errors="0" time="0.051">
+    <testcase name="Validating Status Code - " time="0.105" classname="LoginLogin">
+      <failure type="AssertionFailure" message="expected 401 to deeply equal 415">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Login / Login.]]>
+        <![CDATA[Test description: Validating Status Code - .]]>
+        <![CDATA[Error message: expected 401 to deeply equal 415.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 401 to deeply equal 415
+   at Object.eval sandbox-script.js:1:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Status Code" time="0.105" classname="LoginLogin"/>
+    <testcase name="Response status text check" time="0.105" classname="LoginLogin"/>
+    <testcase name="Content-Type header is application/json" time="0.105" classname="LoginLogin"/>
+    <testcase name="Response time is less than 1000ms" time="0.105" classname="LoginLogin"/>
+  </testsuite>
+  <testsuite name="Program Module / Add New Program with Mandatory fields" id="db48587f-82b2-475e-b3c1-69de35670d92" timestamp="2025-03-13T02:41:31.585Z" tests="8" failures="0" errors="0" time="0.036">
+    <testcase name="Validating Status Code" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Response status text check" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Content-Type header is application/json" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Response time is less than 1000ms" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Verify JSON Schema using AJV" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Validating Test Data Type Of the Response" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Validating ProgramName" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+    <testcase name="Validating Program Status" time="0.036" classname="ProgramModuleAddNewProgramWithMandatoryFields"/>
+  </testsuite>
+  <testsuite name="Program Module / Add New Program with all fields" id="fef81285-33fb-4ffa-8600-1820d2586af7" timestamp="2025-03-13T02:41:31.585Z" tests="8" failures="0" errors="0" time="0.033">
+    <testcase name="Validating Status Code" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Response status text check" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Content-Type header is application/json" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Response time is less than 1000ms" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Verify JSON Schema using AJV" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Validating Test Data Type Of the Response" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Validating ProgramName" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+    <testcase name="Validating Program Status" time="0.033" classname="ProgramModuleAddNewProgramWithAllFields"/>
+  </testsuite>
+  <testsuite name="Program Module / get all programs" id="04cc06bf-2539-4d83-852f-edb3c2903b4f" timestamp="2025-03-13T02:41:31.585Z" tests="2" failures="2" errors="0" time="0.066">
+    <testcase name="Validating Status Code" time="0.028" classname="ProgramModuleGetAllPrograms"/>
+    <testcase name="Response status text check" time="0.028" classname="ProgramModuleGetAllPrograms"/>
+    <testcase name="Content-Type header is application/json" time="0.028" classname="ProgramModuleGetAllPrograms"/>
+    <testcase name="Response time is less than 1000ms" time="0.028" classname="ProgramModuleGetAllPrograms"/>
+    <testcase name="Validating Status Code - " time="0.028" classname="ProgramModuleGetAllPrograms"/>
+    <testcase name="Response status text check - " time="0.028" classname="ProgramModuleGetAllPrograms"/>
+  </testsuite>
+  <testsuite name="Program Module / GET All Programs with Users" id="933d7e45-0ece-4d3f-99be-320af38d1f39" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="0" time="0.065">
+    <testcase name="Validating Status Code - " time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+    <testcase name="Validating Status Code" time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+    <testcase name="Response status text check" time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+    <testcase name="Content-Type header is application/json" time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+    <testcase name="Response time is less than 1000ms" time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+    <testcase name="Response status text check - " time="0.128" classname="ProgramModuleGetAllProgramsWithUsers"/>
+  </testsuite>
+  <testsuite name="Program Module / GET Program by ProgramId" id="9103c066-c8a4-4fdb-9795-fd9b1e3d8be7" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="0" time="0.026">
+    <testcase name="Validating Status Code - " time="0.026" classname="ProgramModuleGetProgramByProgramId"/>
+    <testcase name="Validating Status Code" time="0.026" classname="ProgramModuleGetProgramByProgramId"/>
+    <testcase name="Response status text check" time="0.026" classname="ProgramModuleGetProgramByProgramId"/>
+    <testcase name="Content-Type header is application/json" time="0.026" classname="ProgramModuleGetProgramByProgramId"/>
+    <testcase name="Response time is less than 1000ms" time="0.026" classname="ProgramModuleGetProgramByProgramId"/>
+  </testsuite>
+  <testsuite name="Program Module / Update Program by ProgramName" id="3741a600-3633-4a50-8ac5-c2af4e822803" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="7" errors="0" time="0.028">
+    <testcase name="Validating Status Code" time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Response status text check" time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Content-Type header is application/json" time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Response time is less than 1000ms" time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Validating Status Code - " time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Response status text check - " time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Verify JSON Schema using AJV" time="0.033" classname="ProgramModuleUpdateProgramByProgramName"/>
+    <testcase name="Validating Test Data Type Of the Response" time="0.033" classname="ProgramModuleUpdateProgramByProgramName">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramName.]]>
+        <![CDATA[Test description: Validating Test Data Type Of the Response.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:2:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Program ID" time="0.033" classname="ProgramModuleUpdateProgramByProgramName">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramName.]]>
+        <![CDATA[Test description: Validating Program ID.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:3:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating ProgramName" time="0.033" classname="ProgramModuleUpdateProgramByProgramName">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramName.]]>
+        <![CDATA[Test description: Validating ProgramName.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:4:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Program Status" time="0.033" classname="ProgramModuleUpdateProgramByProgramName">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramName.]]>
+        <![CDATA[Test description: Validating Program Status.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:5:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Program Module / Update Program by ProgramId" id="c77bf359-c1ab-462f-9ed8-08ae4d0da8a7" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="8" errors="0" time="0.029">
+    <testcase name="Validating Status Code - " time="0.035" classname="ProgramModuleUpdateProgramByProgramId">
+      <failure type="AssertionFailure" message="expected 401 to deeply equal 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramId.]]>
+        <![CDATA[Test description: Validating Status Code - .]]>
+        <![CDATA[Error message: expected 401 to deeply equal 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 401 to deeply equal 400
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Status Code" time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Response status text check" time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Content-Type header is application/json" time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Response time is less than 1000ms" time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Response status text check - " time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Verify JSON Schema using AJV" time="0.035" classname="ProgramModuleUpdateProgramByProgramId"/>
+    <testcase name="Validating Test Data Type Of the Response" time="0.035" classname="ProgramModuleUpdateProgramByProgramId">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramId.]]>
+        <![CDATA[Test description: Validating Test Data Type Of the Response.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:2:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Program ID" time="0.035" classname="ProgramModuleUpdateProgramByProgramId">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramId.]]>
+        <![CDATA[Test description: Validating Program ID.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:3:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating ProgramName" time="0.035" classname="ProgramModuleUpdateProgramByProgramId">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramId.]]>
+        <![CDATA[Test description: Validating ProgramName.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:4:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validating Program Status" time="0.035" classname="ProgramModuleUpdateProgramByProgramId">
+      <failure type="AssertionFailure" message="jsonData is not defined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Program Module / Update Program by ProgramId.]]>
+        <![CDATA[Test description: Validating Program Status.]]>
+        <![CDATA[Error message: jsonData is not defined.]]>
+        <![CDATA[Stacktrace: ReferenceError: jsonData is not defined
+   at Object.eval sandbox-script.js:5:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Batch Module / Retrive All Batches" id="aac40961-a5a5-44d7-bd10-5389a3c40cb9" timestamp="2025-03-13T02:41:31.585Z" tests="2" failures="2" errors="1" time="0.032">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code - " time="0.032" classname="BatchModuleRetriveAllBatches">
+      <failure type="AssertionFailure" message="expected 404 to deeply equal 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive All Batches.]]>
+        <![CDATA[Test description: Validating Status Code - .]]>
+        <![CDATA[Error message: expected 404 to deeply equal 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 404 to deeply equal 200
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check - " time="0.032" classname="BatchModuleRetriveAllBatches">
+      <failure type="AssertionFailure" message="expected 'Not Found' to deeply equal 'OK'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive All Batches.]]>
+        <![CDATA[Test description: Response status text check - .]]>
+        <![CDATA[Error message: expected 'Not Found' to deeply equal 'OK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Not Found' to deeply equal 'OK'
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Batch Module / Create New Batch" id="d30df7b2-0d33-4d44-9b61-ea58aa504afe" timestamp="2025-03-13T02:41:31.585Z" tests="5" failures="2" errors="0" time="0.028">
+    <testcase name="Validating Status Code" time="0.031" classname="BatchModuleCreateNewBatch"/>
+    <testcase name="Response status text check" time="0.031" classname="BatchModuleCreateNewBatch"/>
+    <testcase name="Content-Type header is application/json" time="0.031" classname="BatchModuleCreateNewBatch"/>
+    <testcase name="Response time is less than 1000ms" time="0.031" classname="BatchModuleCreateNewBatch"/>
+    <testcase name="Response schema is valid" time="0.031" classname="BatchModuleCreateNewBatch"/>
+  </testsuite>
+  <testsuite name="Batch Module / Create New Batch2" id="5edd6cfb-e899-43e0-9d7b-b3b7b15cc74a" timestamp="2025-03-13T02:41:31.585Z" tests="5" failures="0" errors="0" time="0.031">
+    <testcase name="Validating Status Code" time="0.031" classname="BatchModuleCreateNewBatch2"/>
+    <testcase name="Response status text check" time="0.031" classname="BatchModuleCreateNewBatch2"/>
+    <testcase name="Content-Type header is application/json" time="0.031" classname="BatchModuleCreateNewBatch2"/>
+    <testcase name="Response time is less than 1000ms" time="0.031" classname="BatchModuleCreateNewBatch2"/>
+    <testcase name="Response schema is valid" time="0.031" classname="BatchModuleCreateNewBatch2"/>
+  </testsuite>
+  <testsuite name="Batch Module / Retrive Batch by BatchId" id="288758e2-24fa-4bbf-9698-f882a9c24631" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="1" time="0.838">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.838" classname="BatchModuleRetriveBatchByBatchId">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by BatchId.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 201
+   at Object.eval sandbox-script.js:1:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.838" classname="BatchModuleRetriveBatchByBatchId">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Created'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by BatchId.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Created'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Created'
+   at Object.eval sandbox-script.js:2:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.838" classname="BatchModuleRetriveBatchByBatchId"/>
+    <testcase name="Response time is less than 1000ms" time="0.838" classname="BatchModuleRetriveBatchByBatchId"/>
+  </testsuite>
+  <testsuite name="Batch Module / Retrive Batch by Batchname" id="d22407a7-d35b-4015-b0fe-3a437b47c47e" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="1" time="0.794">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.794" classname="BatchModuleRetriveBatchByBatchname">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by Batchname.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 201
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.794" classname="BatchModuleRetriveBatchByBatchname">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Created'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by Batchname.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Created'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Created'
+   at Object.eval sandbox-script.js:2:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.794" classname="BatchModuleRetriveBatchByBatchname"/>
+    <testcase name="Response time is less than 1000ms" time="0.794" classname="BatchModuleRetriveBatchByBatchname"/>
+  </testsuite>
+  <testsuite name="Batch Module / Retrive Batch by ProgramId" id="24474901-d1d0-4fdb-9c93-6ac1761b169d" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="1" time="0.766">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.766" classname="BatchModuleRetriveBatchByProgramId">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by ProgramId.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 201
+   at Object.eval sandbox-script.js:1:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.766" classname="BatchModuleRetriveBatchByProgramId">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Created'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Retrive Batch by ProgramId.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Created'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Created'
+   at Object.eval sandbox-script.js:2:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.766" classname="BatchModuleRetriveBatchByProgramId"/>
+    <testcase name="Response time is less than 1000ms" time="0.766" classname="BatchModuleRetriveBatchByProgramId"/>
+  </testsuite>
+  <testsuite name="Batch Module / Update Batch by batchId" id="0a2619c4-d266-4249-b650-62e896446cbc" timestamp="2025-03-13T02:41:31.585Z" tests="5" failures="5" errors="0" time="0.030">
+    <testcase name="Validating Status Code - " time="0.031" classname="BatchModuleUpdateBatchByBatchId"/>
+    <testcase name="Validating Status Code" time="0.031" classname="BatchModuleUpdateBatchByBatchId"/>
+    <testcase name="Response status text check" time="0.031" classname="BatchModuleUpdateBatchByBatchId">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Ok'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Batch Module / Update Batch by batchId.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Ok'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Ok'
+   at Object.eval sandbox-script.js:2:15).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.031" classname="BatchModuleUpdateBatchByBatchId"/>
+    <testcase name="Response time is less than 1000ms" time="0.031" classname="BatchModuleUpdateBatchByBatchId"/>
+    <testcase name="Response schema is valid" time="0.031" classname="BatchModuleUpdateBatchByBatchId"/>
+  </testsuite>
+  <testsuite name="Delete and Data Cleanup / Delete Batch by BatchId" id="bc2ee2e3-ea67-4d87-a042-31e849fd62d5" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="3" errors="0" time="0.030">
+    <testcase name="Validating Status Code - " time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId"/>
+    <testcase name="Validating Status Code" time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId"/>
+    <testcase name="Response status text check" time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'ok'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Delete and Data Cleanup / Delete Batch by BatchId.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'ok'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'ok'
+   at Object.eval sandbox-script.js:2:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId"/>
+    <testcase name="Response time is less than 1000ms" time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId"/>
+    <testcase name="Response status text check - " time="0.035" classname="DeleteAndDataCleanupDeleteBatchByBatchId">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'ok'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: Delete and Data Cleanup / Delete Batch by BatchId.]]>
+        <![CDATA[Test description: Response status text check - .]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'ok'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'ok'
+   at Object.eval sandbox-script.js:2:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Delete and Data Cleanup / Delete Program By ProgramID" id="db002fa1-f81e-4b1f-8721-f6d6e9fa4934" timestamp="2025-03-13T02:41:31.585Z" tests="2" failures="4" errors="0" time="0.027">
+    <testcase name="Validating Status Code - " time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+    <testcase name="Response status text check - " time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+    <testcase name="Validating Status Code" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+    <testcase name="Response status text check" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+    <testcase name="Content-Type header is application/json" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+    <testcase name="Response time is less than 1000ms" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramId"/>
+  </testsuite>
+  <testsuite name="Delete and Data Cleanup / Delete Program By ProgramName" id="fe40f658-6f87-4a1f-bf44-d3b043e088be" timestamp="2025-03-13T02:41:31.585Z" tests="2" failures="4" errors="0" time="0.030">
+    <testcase name="Validating Status Code - " time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+    <testcase name="Response status text check - " time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+    <testcase name="Validating Status Code" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+    <testcase name="Response status text check" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+    <testcase name="Content-Type header is application/json" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+    <testcase name="Response time is less than 1000ms" time="0.030" classname="DeleteAndDataCleanupDeleteProgramByProgramName"/>
+  </testsuite>
+  <testsuite name="UserModule / POST / Create New User" id="1a039348-f166-43a6-88ab-cc87d63d1f3e" timestamp="2025-03-13T02:41:31.585Z" tests="5" failures="2" errors="0" time="0.037">
+    <testcase name="Validating Status Code" time="0.037" classname="UserModulePostCreateNewUser">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST / Create New User.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 201
+   at Object.eval sandbox-script.js:1:19).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.037" classname="UserModulePostCreateNewUser">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Created'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST / Create New User.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Created'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Created'
+   at Object.eval sandbox-script.js:2:19).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.037" classname="UserModulePostCreateNewUser"/>
+    <testcase name="Response time is less than 1000ms" time="0.037" classname="UserModulePostCreateNewUser"/>
+    <testcase name="Content-Type should be application/json" time="0.037" classname="UserModulePostCreateNewUser"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / Create New User" id="16b6e19f-277c-441c-89b3-9057fdd6c041" timestamp="2025-03-13T02:41:31.585Z" tests="5" failures="10" errors="26" time="0.038">
+    <system-err><![CDATA[Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'userId')
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'loginStatus')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.030" classname="UserModulePostCopyCreateNewUser"/>
+    <testcase name="Response status text check" time="0.030" classname="UserModulePostCopyCreateNewUser"/>
+    <testcase name="Content-Type header is application/json" time="0.030" classname="UserModulePostCopyCreateNewUser"/>
+    <testcase name="Response time is less than 1000ms" time="0.030" classname="UserModulePostCopyCreateNewUser"/>
+    <testcase name="Content-Type should be application/json" time="0.030" classname="UserModulePostCopyCreateNewUser"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / Get User By UserId" id="98ec62dd-600f-4ec2-bb23-422d22721064" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="8" errors="0" time="0.032">
+    <testcase name="Validating Status Code" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="Response status text check" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="Content-Type header is application/json" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="Response time is less than 1000ms" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="Status code is 200" time="0.029" classname="UserModulePostCopyGetUserByUserId">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / Get User By UserId.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:30).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="Content-Type should be application/json" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+    <testcase name="status line" time="0.029" classname="UserModulePostCopyGetUserByUserId">
+      <failure type="AssertionFailure" message="expected 'Not Found' to include 'OK'">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / Get User By UserId.]]>
+        <![CDATA[Test description: status line.]]>
+        <![CDATA[Error message: expected 'Not Found' to include 'OK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Not Found' to include 'OK'
+   at Object.eval sandbox-script.js:4:30).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate schema" time="0.029" classname="UserModulePostCopyGetUserByUserId"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / UpdateUser" id="ca4423fb-4250-41f3-8c89-352ce4e9db39" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="3" errors="1" time="0.032">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.032" classname="UserModulePostCopyUpdateUser">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUser.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:31).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.032" classname="UserModulePostCopyUpdateUser">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUser.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:31).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.032" classname="UserModulePostCopyUpdateUser"/>
+    <testcase name="Response time is less than 1000ms" time="0.032" classname="UserModulePostCopyUpdateUser"/>
+    <testcase name="Status code is 200" time="0.032" classname="UserModulePostCopyUpdateUser">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUser.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 400
+   at Object.eval sandbox-script.js:1:31).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.032" classname="UserModulePostCopyUpdateUser"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / UpdateRoleId" id="fcb152d2-a4b0-41f2-a2f7-f58b936e6749" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="2" errors="1" time="0.031">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.031" classname="UserModulePostCopyUpdateRoleId"/>
+    <testcase name="Response status text check" time="0.031" classname="UserModulePostCopyUpdateRoleId"/>
+    <testcase name="Content-Type header is application/json" time="0.031" classname="UserModulePostCopyUpdateRoleId"/>
+    <testcase name="Response time is less than 1000ms" time="0.031" classname="UserModulePostCopyUpdateRoleId"/>
+    <testcase name="Status code is 200" time="0.031" classname="UserModulePostCopyUpdateRoleId">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateRoleId.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:32).]]>
+      </failure>
+    </testcase>
+    <testcase name="Body matches string" time="0.031" classname="UserModulePostCopyUpdateRoleId">
+      <failure type="AssertionFailure" message="expected '{&quot;message&quot;:&quot;User not found with Id : …' to include 'Role Id Updated for User'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateRoleId.]]>
+        <![CDATA[Test description: Body matches string.]]>
+        <![CDATA[Error message: expected '{"message":"User not found with Id : …' to include 'Role Id Updated for User'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '{"message":"User not found with Id : …' to include 'Role Id Updated for User'
+   at Object.eval sandbox-script.js:2:32).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / CreatePgm" id="682c5af6-4fad-42e4-ab1d-4bb188f9a4f3" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="3" errors="1" time="0.034">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.034" classname="UserModulePostCopyCreatePgm">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreatePgm.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:33).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.034" classname="UserModulePostCopyCreatePgm">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreatePgm.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:33).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.034" classname="UserModulePostCopyCreatePgm"/>
+    <testcase name="Response time is less than 1000ms" time="0.034" classname="UserModulePostCopyCreatePgm"/>
+    <testcase name="Status code is 200" time="0.034" classname="UserModulePostCopyCreatePgm">
+      <failure type="AssertionFailure" message="expected response to have status code 201 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreatePgm.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 201 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 201 but got 400
+   at Object.eval sandbox-script.js:1:33).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.034" classname="UserModulePostCopyCreatePgm"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / CreateBatch" id="05c3920c-5b7a-4532-bed4-4658e9de2033" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="3" errors="1" time="0.027">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.027" classname="UserModulePostCopyCreateBatch">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreateBatch.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:34).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.027" classname="UserModulePostCopyCreateBatch">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreateBatch.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:34).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.027" classname="UserModulePostCopyCreateBatch"/>
+    <testcase name="Response time is less than 1000ms" time="0.027" classname="UserModulePostCopyCreateBatch"/>
+    <testcase name="Status code is 200" time="0.027" classname="UserModulePostCopyCreateBatch">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / CreateBatch.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 400
+   at Object.eval sandbox-script.js:1:34).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.027" classname="UserModulePostCopyCreateBatch"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / UpdateUserRolePgmBatchStatus" id="7ffc4d3f-3f70-4fdd-a00f-2874bf73863c" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="3" errors="3" time="0.038">
+    <system-err><![CDATA[Iteration: 0
+
+---
+testScriptError: Error: expected false to equal true
+    at Object.eval (eval at exec (evalmachine.<anonymous>:66:1819788), <anonymous>:15:23)
+    at u.exec (evalmachine.<anonymous>:66:1819823)
+    at t.exports (evalmachine.<anonymous>:66:5848)
+    at Object.<anonymous> (evalmachine.<anonymous>:66:8247)
+    at evalmachine.<anonymous>:15:26
+    at Array.forEach (<anonymous>)
+    at Object.emit (evalmachine.<anonymous>:14:59)
+    at evalmachine.<anonymous>:59:24
+    at evalmachine.<anonymous>:5:21
+    at evalmachine.<anonymous>:6:18
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+prerequestScriptError: Cannot read properties of undefined (reading '0')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserRolePgmBatchStatus.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:35).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserRolePgmBatchStatus.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:35).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus"/>
+    <testcase name="Response time is less than 1000ms" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus"/>
+    <testcase name="Status code is 200" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserRolePgmBatchStatus.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 400
+   at Object.eval sandbox-script.js:1:35).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.038" classname="UserModulePostCopyUpdateUserRolePgmBatchStatus"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / UpdateUserLoginStatus" id="f38b99a0-8b95-4e59-9674-4d1728c38d6f" timestamp="2025-03-13T02:41:31.585Z" tests="7" failures="4" errors="1" time="0.027">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserLoginStatus.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:36).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserLoginStatus.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:36).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus"/>
+    <testcase name="Response time is less than 1000ms" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus"/>
+    <testcase name="Status code is 200" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserLoginStatus.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 400
+   at Object.eval sandbox-script.js:1:36).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus"/>
+    <testcase name="Body matches string" time="0.027" classname="UserModulePostCopyUpdateUserLoginStatus">
+      <failure type="AssertionFailure" message="expected '{&quot;message&quot;:&quot;userLoginEmail must conta…' to include 'Status Updated for User:'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / UpdateUserLoginStatus.]]>
+        <![CDATA[Test description: Body matches string.]]>
+        <![CDATA[Error message: expected '{"message":"userLoginEmail must conta…' to include 'Status Updated for User:'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '{"message":"userLoginEmail must conta…' to include 'Status Updated for User:'
+   at Object.eval sandbox-script.js:3:36).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / DELETE" id="03fa8c22-0902-4417-ad33-c8b09fb204fd" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="1" errors="1" time="0.030">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.030" classname="UserModulePostCopyDelete"/>
+    <testcase name="Response status text check" time="0.030" classname="UserModulePostCopyDelete"/>
+    <testcase name="Content-Type header is application/json" time="0.030" classname="UserModulePostCopyDelete"/>
+    <testcase name="Response time is less than 1000ms" time="0.030" classname="UserModulePostCopyDelete"/>
+    <testcase name="Status code is 200" time="0.030" classname="UserModulePostCopyDelete">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / DELETE.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:37).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.030" classname="UserModulePostCopyDelete"/>
+  </testsuite>
+  <testsuite name="UserModule / POST Copy / New Request" id="d15cf441-a24c-4de5-a603-13c92dd3dab1" timestamp="2025-03-13T02:41:31.585Z" tests="4" failures="2" errors="1" time="0.128">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: Cannot read properties of undefined (reading 'data')
+---
+]]></system-err>
+    <testcase name="Validating Status Code" time="0.128" classname="UserModulePostCopyNewRequest">
+      <failure type="AssertionFailure" message="expected 400 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / New Request.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 400 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 400 to deeply equal 404
+   at Object.eval sandbox-script.js:1:38).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.128" classname="UserModulePostCopyNewRequest">
+      <failure type="AssertionFailure" message="expected 'Bad Request' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / POST Copy / New Request.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'Bad Request' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Bad Request' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:38).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.128" classname="UserModulePostCopyNewRequest"/>
+    <testcase name="Response time is less than 1000ms" time="0.128" classname="UserModulePostCopyNewRequest"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get All Users" id="21af0c2f-fb09-4127-8093-e150c1c82f0c" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="3" errors="0" time="1.075">
+    <testcase name="Validating Status Code" time="0.741" classname="UserModuleGetPositiveGetAllUsers">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Users.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:39).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.741" classname="UserModuleGetPositiveGetAllUsers">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Users.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:39).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="Response time is less than 1000ms" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="Status code is 200" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="Content-Type is present" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="Content-Type should be application/json" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="status line" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+    <testcase name="Validate schema" time="0.741" classname="UserModuleGetPositiveGetAllUsers"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get All Active Users" id="a40cc6a3-8335-4b4f-aa5a-d4ee096706c3" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="4" errors="0" time="0.542">
+    <testcase name="Validating Status Code" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Active Users.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:40).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Active Users.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:40).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="Response time is less than 1000ms" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="Status code is 200" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="Content-Type is present" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="Content-Type should be application/json" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="status line" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+    <testcase name="Validate schema" time="0.568" classname="UserModuleGetPositiveGetAllActiveUsers"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get All User Emails" id="41c3f9cb-a0ea-4bfd-a702-4559e979e625" timestamp="2025-03-13T02:41:31.585Z" tests="7" failures="4" errors="0" time="0.029">
+    <testcase name="Validating Status Code" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All User Emails.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:41).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All User Emails.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:41).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails"/>
+    <testcase name="Response time is less than 1000ms" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails"/>
+    <testcase name="Status code is 200" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails"/>
+    <testcase name="Content-Type is present" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails"/>
+    <testcase name="Body matches string" time="0.030" classname="UserModuleGetPositiveGetAllUserEmails"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get All Roles" id="d15cb406-9c30-489c-aa9f-b4192344a053" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="4" errors="0" time="0.025">
+    <testcase name="Validating Status Code" time="0.024" classname="UserModuleGetPositiveGetAllRoles">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Roles.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:42).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.024" classname="UserModuleGetPositiveGetAllRoles">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Roles.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:42).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="Response time is less than 1000ms" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="Status code is 200" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="Content-Type is present" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="Content-Type should be application/json" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="status line" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+    <testcase name="Validate schema" time="0.024" classname="UserModuleGetPositiveGetAllRoles"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get All Users With Roles" id="136b27af-4f69-4042-8d73-447912b35052" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="4" errors="0" time="0.069">
+    <testcase name="Validating Status Code" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Users With Roles.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:43).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get All Users With Roles.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:43).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="Response time is less than 1000ms" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="Status code is 200" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="Content-Type is present" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="Content-Type should be application/json" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="status line" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+    <testcase name="Validate schema" time="0.061" classname="UserModuleGetPositiveGetAllUsersWithRoles"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get Count of Active And Inactive Users" id="cdc5e213-d65d-40dd-b945-eb65d424f901" timestamp="2025-03-13T02:41:31.585Z" tests="9" failures="4" errors="0" time="0.028">
+    <testcase name="Validating Status Code" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Count of Active And Inactive Users.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:44).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Count of Active And Inactive Users.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:44).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="Response time is less than 1000ms" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="Status code is 200" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="Content-Type is present" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="Content-Type should be application/json" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="status line" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+    <testcase name="Validate schema" time="0.027" classname="UserModuleGetPositiveGetCountOfActiveAndInactiveUsers"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get Users By Pgm Batches" id="3b5fa52b-44f4-41f4-8b3d-f7942934cfa2" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="6" errors="0" time="0.038">
+    <testcase name="Validating Status Code" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By Pgm Batches.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:45).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By Pgm Batches.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:45).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches"/>
+    <testcase name="Response time is less than 1000ms" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches"/>
+    <testcase name="Status code is 200" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches"/>
+    <testcase name="Content-Type is present" time="0.035" classname="UserModuleGetPositiveGetUsersByPgmBatches"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get Users For Pgm" id="e339cf0e-8c9a-4d1b-90e8-6a919d5d7930" timestamp="2025-03-13T02:41:31.585Z" tests="6" failures="6" errors="0" time="0.043">
+    <testcase name="Validating Status Code" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm">
+      <failure type="AssertionFailure" message="expected 200 to deeply equal 404">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users For Pgm.]]>
+        <![CDATA[Test description: Validating Status Code.]]>
+        <![CDATA[Error message: expected 200 to deeply equal 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 200 to deeply equal 404
+   at Object.eval sandbox-script.js:1:46).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response status text check" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm">
+      <failure type="AssertionFailure" message="expected 'OK' to deeply equal 'Not Found'">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users For Pgm.]]>
+        <![CDATA[Test description: Response status text check.]]>
+        <![CDATA[Error message: expected 'OK' to deeply equal 'Not Found'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to deeply equal 'Not Found'
+   at Object.eval sandbox-script.js:2:46).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type header is application/json" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm"/>
+    <testcase name="Response time is less than 1000ms" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm"/>
+    <testcase name="Status code is 200" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm"/>
+    <testcase name="Content-Type is present" time="0.043" classname="UserModuleGetPositiveGetUsersForPgm"/>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Get Users By RoleId" id="5bfdfacd-6ffc-4592-804b-48b4b4020a6d" timestamp="2025-03-13T02:41:31.585Z" tests="7" failures="18" errors="0" time="0.026">
+    <testcase name="Validating Status Code - " time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId"/>
+    <testcase name="Response status text check - " time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId"/>
+    <testcase name="Status code is 200" time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 4 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By RoleId.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:47).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId"/>
+    <testcase name="Content-Type should be application/json" time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId">
+      <failure type="AssertionFailure" message="expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'">
+        <![CDATA[Failed 4 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By RoleId.]]>
+        <![CDATA[Test description: Content-Type should be application/json.]]>
+        <![CDATA[Error message: expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'
+   at Object.eval sandbox-script.js:3:47).]]>
+      </failure>
+    </testcase>
+    <testcase name="status line" time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId">
+      <failure type="AssertionFailure" message="expected 'Not Found' to include 'OK'">
+        <![CDATA[Failed 4 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By RoleId.]]>
+        <![CDATA[Test description: status line.]]>
+        <![CDATA[Error message: expected 'Not Found' to include 'OK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Not Found' to include 'OK'
+   at Object.eval sandbox-script.js:4:47).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate schema" time="0.025" classname="UserModuleGetPositiveGetUsersByRoleId">
+      <failure type="AssertionFailure" message="Unexpected token 'I' at 1:1&#xA;Invalid endpoint&#xA;^">
+        <![CDATA[Failed 4 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Get Users By RoleId.]]>
+        <![CDATA[Test description: Validate schema.]]>
+        <![CDATA[Error message: Unexpected token 'I' at 1:1
+Invalid endpoint
+^.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token 'I' at 1:1
+Invalid endpoint
+^
+   at Object.eval sandbox-script.js:5:47).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="UserModule / GET Positive / Gets Users By RoleId V2" id="2360c547-f19f-4f73-9d03-1a979f6fe9f4" timestamp="2025-03-13T02:41:31.585Z" tests="7" failures="14" errors="0" time="0.026">
+    <testcase name="Validating Status Code - " time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2"/>
+    <testcase name="Response status text check - " time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2"/>
+    <testcase name="Status code is 200" time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Gets Users By RoleId V2.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:48).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2"/>
+    <testcase name="Content-Type should be application/json" time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2">
+      <failure type="AssertionFailure" message="expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Gets Users By RoleId V2.]]>
+        <![CDATA[Test description: Content-Type should be application/json.]]>
+        <![CDATA[Error message: expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'text/plain;charset=UTF-8' to deeply equal 'application/json'
+   at Object.eval sandbox-script.js:3:48).]]>
+      </failure>
+    </testcase>
+    <testcase name="status line" time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2">
+      <failure type="AssertionFailure" message="expected 'Not Found' to include 'OK'">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Gets Users By RoleId V2.]]>
+        <![CDATA[Test description: status line.]]>
+        <![CDATA[Error message: expected 'Not Found' to include 'OK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Not Found' to include 'OK'
+   at Object.eval sandbox-script.js:4:48).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate schema" time="0.031" classname="UserModuleGetPositiveGetsUsersByRoleIdV2">
+      <failure type="AssertionFailure" message="Unexpected token 'I' at 1:1&#xA;Invalid endpoint&#xA;^">
+        <![CDATA[Failed 3 times.]]>
+        <![CDATA[Collection JSON ID: 57aa222a-55ee-4f31-adfd-ae09410ba8c1.]]>
+        <![CDATA[Collection name: Team8_Endpoint_Explorers_Lms_Hackathon Copy.]]>
+        <![CDATA[Request name: UserModule / GET Positive / Gets Users By RoleId V2.]]>
+        <![CDATA[Test description: Validate schema.]]>
+        <![CDATA[Error message: Unexpected token 'I' at 1:1
+Invalid endpoint
+^.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token 'I' at 1:1
+Invalid endpoint
+^
+   at Object.eval sandbox-script.js:5:48).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Logout" id="18a68285-d8c6-4f11-b667-856353e36625" timestamp="2025-03-13T02:41:31.585Z" tests="2" failures="2" errors="0" time="0.026">
+    <testcase name="Validating Status Code - " time="0.028" classname="Logout"/>
+    <testcase name="Response status text check - " time="0.028" classname="Logout"/>
+    <testcase name="Validating Status Code" time="0.028" classname="Logout"/>
+    <testcase name="Response status text check" time="0.028" classname="Logout"/>
+    <testcase name="Content-Type header is application/json" time="0.028" classname="Logout"/>
+    <testcase name="Response time is less than 1000ms" time="0.028" classname="Logout"/>
+  </testsuite>
+</testsuites>
