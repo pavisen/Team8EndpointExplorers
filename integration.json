@@ -563,7 +563,7 @@
             "method": "POST",
             "url": "valid",
             "endpoint": "batches",
-            "batchName": "EndpointExplorers",
+            "batchName": "EndpointExplorersfff",
             "batchDescription": "created by Team8  postman EndpointExplorers",
             "batchNoOfClasses": 10,
             "batchStatus": "Active",
@@ -633,7 +633,7 @@
             "method": "POST",
             "url": "valid",
             "endpoint": "batches",
-            "batchName": "EndpointExplorers1",
+            "batchName": "EndpointExplorers1fff",
             "batchDescription": "created by Team8  postman EndpointExplorers",
             "batchNoOfClasses": 10,
             "batchStatus": "Active",
@@ -932,12 +932,12 @@
             "comments": "SDET",
             "pg": "B.E",
             "ug": "M.S",
-            "fname": "TeamEightEndPntExp",
+            "fname": "TeamEightEndPntExpFinal",
             "lname": "H",
-            "linkedinUrl": "www.linkedin.com/TeamEightEndPntExp/1234",
+            "linkedinUrl": "www.linkedin.com/TeamEightEndPntExpFinal/1234",
             "userLocation": "USA",
             "mname": "string",
-            "phnum": "+91 4594444467",
+            "phnum": "+91 4004444679",
             "userRoleMaps": [
               {
                 "roleId": "R02",
@@ -947,8 +947,8 @@
             "timeZone": "CST",
             "visaStatus": "H4",
             "userLogin": {
-              "userloginstatus": "Active",
-              "newuserloginEmail": "TeamEightEndPntExp@gmail.com"
+              "loginStatus": "Active",
+              "userLoginEmail": "finalteam@gmail.com"
             },
 
             "statusCode": 201,
@@ -964,12 +964,12 @@
             "comments": "SDET",
             "pg": "B.E",
             "ug": "M.S",
-            "fname": "TeamEightEndPntExp",
+            "fname": "TeamEightEndPntExpff",
             "lname": "H",
             "linkedinUrl": "www.linkedin.com",
             "userLocation": "USA",
             "mname": "string",
-            "phnum": "+91 4594444467",
+            "phnum": "+91 4594844670",
             "userRoleMaps": [
               {
                 "roleId": "R02",

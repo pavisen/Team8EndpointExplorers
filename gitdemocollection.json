@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "4fc09dea-e9e1-48f3-a54c-2d6c19879d28",
-		"name": "Team8_Endpoint_Explorers_Lms_Hackathon Copy 3",
+		"name": "Team8_Endpoint_Explorers_LMS_Hackathon_Feb2025",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33096544",
 		"_collection_link": "https://blue-rocket-77491.postman.co/workspace/My-Workspace~f796750f-b02e-40a1-840d-2ab9c3b9172a/collection/33096544-4fc09dea-e9e1-48f3-a54c-2d6c19879d28?action=share&source=collection_link&creator=33096544"
@@ -2463,94 +2463,6 @@
 			]
 		},
 		{
-			"name": "Delete and Data Cleanup",
-			"item": [
-				{
-					"name": "Delete Batch by BatchId",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"console.log(\"printId:----------------\",pm.variables.get(\"batchId2\"))"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"if (pm.response.text() === '') {\r",
-									"    console.log(\"Empty response received.\");\r",
-									"    pm.test(\"Validating Status Code\", () => {\r",
-									"        pm.expect(pm.response.code).to.eql(pm.variables.get(\"statusCode\"));\r",
-									"    });\r",
-									"} else {\r",
-									"    const jsonData = pm.response.text();\r",
-									"    eval(pm.environment.get(\"commonTests\"))();\r",
-									"}\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{authToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}{{endpoint}}",
-							"host": [
-								"{{baseUrl}}{{endpoint}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Program By ProgramID",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}{{endpoint}}",
-							"host": [
-								"{{baseUrl}}{{endpoint}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Program By ProgramName",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}{{endpoint}}",
-							"host": [
-								"{{baseUrl}}{{endpoint}}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "UserModule",
 			"item": [
 				{
@@ -2577,13 +2489,12 @@
 											"",
 											"pm.collectionVariables.set('roleId', firstRoleId);",
 											"pm.collectionVariables.set('userRoleStatus', firstUserRoleStatus);",
-											"pm.collectionVariables.set(\"loginStatus\", pm.iterationData.get(\"userLogin.loginStatus\"));",
-											"pm.collectionVariables.set(\"userLoginEmail\", pm.iterationData.get(\"userLogin.userLoginEmail\"));",
+											"//pm.collectionVariables.set(\"loginStatus2\", pm.iterationData.get(\"userLogin.loginStatus\"));",
+											"//pm.collectionVariables.set(\"userLoginEmail2\", pm.iterationData.get(\"userLogin.userLoginEmail\"));",
 											"",
 											"",
-											"// pm.collectionVariables.set(\"loginStatus\", data[\"userLogin\"]['loginStatus']);",
-											"// pm.collectionVariables.set(\"userLoginEmail\", data[\"userLogin\"]['userLoginEmail']);",
-											""
+											"//pm.collectionVariables.set(\"loginStatus2\", data[\"userLogin\"]['loginStatus']);",
+											"//pm.collectionVariables.set(\"userLoginEmail2\", data[\"userLogin\"]['userLoginEmail']);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -3002,71 +2913,48 @@
 							"response": []
 						},
 						{
-							"name": "Create Pgm",
+							"name": "Update User Role Pgm Batch Status",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
+											"// Fixed TypeError for checking 'true' inclusion",
 											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(201);",
+											"    pm.response.to.have.status(200);",
 											"});",
+											"",
 											"pm.test(\"Content-Type is present\", function () {",
 											"    pm.response.to.have.header(\"Content-Type\");",
 											"});",
 											"",
-											"",
-											"var jsonResp = pm.response.json();",
-											"var pgmIdResp = jsonResp.programId;",
-											"pm.environment.set(\"pgmId\",pgmIdResp);",
+											"var jsonData = pm.response.json();",
+											"var success = jsonData.success;",
+											"pm.expect(success).to.equal(true);",
+											"pm.test(\"Response message is true\");",
 											""
 										],
 										"type": "text/javascript",
 										"packages": {}
 									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"programDescription\": \"{{programDescription}}\",\n\"programName\": \"{{programName}}\",\n\"programStatus\": \"{{programStatus}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
 								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}/saveprogram",
-									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"saveprogram"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create Batch",
-							"event": [
 								{
-									"listen": "test",
+									"listen": "prerequest",
 									"script": {
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});",
+											"let userRoleProgramBatches = pm.variables.get('userRoleProgramBatches');",
 											"",
-											"var jsonResp = pm.response.json();",
-											"var batchIdResp = jsonResp.batchId;",
-											"pm.environment.set(\"batchid\",batchIdResp);"
+											"// Parse the JSON string if it is a string (optional depending on your setup)",
+											"if (typeof userRoleProgramBatches === 'string') {",
+											"    userRoleProgramBatches = JSON.parse(userRoleProgramBatches);",
+											"}",
+											"  ",
+											"",
+											"let firstRolePgmBatch = userRoleProgramBatches[0].batchId;",
+											"let firstUserRolePgmBatchStatus = userRoleProgramBatches[0].userRoleProgramBatchStatus;",
+											"",
+											"pm.collectionVariables.set('batchId', firstRolePgmBatch);",
+											"pm.collectionVariables.set('userRoleProgramBatchStatus', firstUserRolePgmBatchStatus);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -3074,11 +2962,11 @@
 								}
 							],
 							"request": {
-								"method": "POST",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"batchDescription\":\"{{batchDescription}}\",\n\"batchName\":\"{{batchName}}\",\n\"batchNoOfClasses\": {{batchNoOfClasses}},\n\"batchStatus\": \"{{batchStatus}}\",\n\"programId\": \"{{pgmId}}\"\n}",
+									"raw": "{\n\"programId\": \"{{programId1}}\",\n\"roleId\": \"{{roleIdPgmBatch}}\",\n\"userId\": \"{{userIdforupdate}}\",\n\"userRoleProgramBatches\": [\n{\n\"batchId\": \"{{batchId2}}\",\n\"userRoleProgramBatchStatus\":\"{{userRoleProgramBatchStatus}}\"\n}\n]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3086,12 +2974,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{lmsBaseUrl}}/batches",
+									"raw": "{{lmsBaseUrl}}{{endpoint}}",
 									"host": [
-										"{{lmsBaseUrl}}"
-									],
-									"path": [
-										"batches"
+										"{{lmsBaseUrl}}{{endpoint}}"
 									]
 								}
 							},
@@ -3132,37 +3017,6 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{lmsBaseUrl}}{{endpoint}}",
-									"host": [
-										"{{lmsBaseUrl}}{{endpoint}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete User By UserId",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});",
-											"pm.test(\"Content-Type is present\", function () {",
-											"    pm.response.to.have.header(\"Content-Type\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [],
 								"url": {
 									"raw": "{{lmsBaseUrl}}{{endpoint}}",
 									"host": [
@@ -4191,6 +4045,125 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Delete and Data Cleanup",
+			"item": [
+				{
+					"name": "Delete User By UserId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{lmsBaseUrl}}{{endpoint}}",
+							"host": [
+								"{{lmsBaseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Batch by BatchId",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"printId:----------------\",pm.variables.get(\"batchId2\"))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.text() === '') {\r",
+									"    console.log(\"Empty response received.\");\r",
+									"    pm.test(\"Validating Status Code\", () => {\r",
+									"        pm.expect(pm.response.code).to.eql(pm.variables.get(\"statusCode\"));\r",
+									"    });\r",
+									"} else {\r",
+									"    const jsonData = pm.response.text();\r",
+									"    eval(pm.environment.get(\"commonTests\"))();\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{endpoint}}",
+							"host": [
+								"{{baseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Program By ProgramID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{endpoint}}",
+							"host": [
+								"{{baseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Program By ProgramName",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{endpoint}}",
+							"host": [
+								"{{baseUrl}}{{endpoint}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
